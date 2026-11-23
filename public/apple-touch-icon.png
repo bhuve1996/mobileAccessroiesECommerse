@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="appleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1D4ED8" />
+      <stop offset="100%" stop-color="#4338CA" />
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="128" fill="url(#appleGradient)" />
+
+  <!-- Phone Frame -->
+  <rect x="144" y="80" width="224" height="352" rx="48" stroke="#FFFFFF" stroke-width="20" fill="none" opacity="0.95" />
+  <line x1="224" y1="112" x2="288" y2="112" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" />
+
+  <!-- Lightning Bolt -->
+  <path d="M272 144L192 264H264L240 368L328 240H256L272 144Z" fill="#FBBF24" />
+</svg>

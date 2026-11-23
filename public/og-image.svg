@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="ogBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16" />
+      <stop offset="60%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E1B4B" />
+    </linearGradient>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#60A5FA" />
+      <stop offset="100%" stop-color="#818CF8" />
+    </linearGradient>
+    <filter id="ogGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="40" result="blur" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#ogBg)" />
+
+  <!-- Ambient Glow -->
+  <circle cx="1000" cy="180" r="240" fill="#2563EB" opacity="0.25" filter="url(#ogGlow)" />
+  <circle cx="150" cy="500" r="220" fill="#4F46E5" opacity="0.2" filter="url(#ogGlow)" />
+
+  <!-- Top Badge -->
+  <g transform="translate(100, 90)">
+    <rect width="360" height="42" rx="21" fill="#1E293B" stroke="#334155" stroke-width="1.5" />
+    <text x="25" y="27" fill="#FBBF24" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="800">⚡ INDIA'S PREMIUM MOBILE STORE</text>
+  </g>
+
+  <!-- Main Headline -->
+  <text x="100" y="220" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="900" letter-spacing="-1">
+    ZAP<tspan fill="url(#brandGrad)">GEAR</tspan> INDIA
+  </text>
+  <text x="100" y="280" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="600">
+    Style &amp; Armour for Flagship Phones
+  </text>
+
+  <!-- Subtitle -->
+  <text x="100" y="340" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="400">
+    Drop-Tested MagSafe Cases • 9H UV Privacy Glass • 65W GaN Fast Chargers
+  </text>
+
+  <!-- Feature Pills -->
+  <g transform="translate(100, 420)">
+    <!-- Pill 1 -->
+    <rect x="0" y="0" width="220" height="54" rx="16" fill="#1E293B" stroke="#334155" />
+    <text x="25" y="34" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700">✓ Free Delivery ₹499+</text>
+
+    <!-- Pill 2 -->
+    <rect x="240" y="0" width="230" height="54" rx="16" fill="#1E293B" stroke="#334155" />
+    <text x="265" y="34" fill="#60A5FA" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700">₹ Cash on Delivery</text>
+
+    <!-- Pill 3 -->
+    <rect x="490" y="0" width="220" height="54" rx="16" fill="#1E293B" stroke="#334155" />
+    <text x="515" y="34" fill="#FBBF24" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700">⚡ 24-48hr Dispatch</text>
+  </g>
+
+  <!-- Bottom Promo Tag -->
+  <text x="100" y="550" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="500">
+    Use code <tspan fill="#38BDF8" font-weight="700">INDIAFIRST</tspan> for Flat 10% Off • zapgear.in
+  </text>
+</svg>
