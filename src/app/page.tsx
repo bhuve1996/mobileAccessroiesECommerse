@@ -1,6 +1,7 @@
 import { HeroBanner } from "@/components/home/hero-banner";
 import { DeviceSelector } from "@/components/home/device-selector";
 import { CategoryGrid } from "@/components/home/category-grid";
+import { PromoBanners } from "@/components/home/promo-banners";
 import { FlashDeals } from "@/components/home/flash-deals";
 import { PincodeChecker } from "@/components/home/pincode-checker";
 
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroBanner />
       <DeviceSelector />
       <CategoryGrid />
+      <PromoBanners />
       <FlashDeals />
       <PincodeChecker />
     </div>
