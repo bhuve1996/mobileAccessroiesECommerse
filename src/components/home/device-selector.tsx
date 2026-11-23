@@ -38,13 +38,13 @@ export function DeviceSelector({ onSelectModel }: DeviceSelectorProps) {
           <div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold mb-2">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Smart Device Fit Filter</span>
+              <span>Select Your Phone</span>
             </div>
             <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight">
-              Select Your Phone for 100% Guaranteed Fit
+              Pick Your Phone for the Perfect Fit
             </h2>
             <p className="text-xs sm:text-sm text-zinc-400 mt-0.5">
-              Choose your brand and model to see exact cases, covers, and screen guards crafted for your phone.
+              Choose your brand and model to find cases, covers, and screen guards designed specifically for your phone.
             </p>
           </div>
 

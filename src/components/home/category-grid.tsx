@@ -11,7 +11,7 @@ export function CategoryGrid() {
             Shop by Category
           </h2>
           <p className="text-xs text-zinc-500 dark:text-zinc-400">
-            Top tier accessories built with military-grade resilience
+            Top picks for your daily mobile needs
           </p>
         </div>
         <Link

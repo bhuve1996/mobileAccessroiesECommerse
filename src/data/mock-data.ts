@@ -67,7 +67,7 @@ export const CATEGORIES: Category[] = [
     slug: "cables",
     iconName: "Cable",
     count: "Type-C & Lightning",
-    image: "https://images.unsplash.com/photo-1608248597359-bb5591eb3397?w=600&auto=format&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
   },
   {
     id: "magsafe",
@@ -76,7 +76,7 @@ export const CATEGORIES: Category[] = [
     iconName: "Disc",
     count: "Qi2 Compatible",
     tag: "Trending",
-    image: "https://images.unsplash.com/photo-1622445268462-328659d81643?w=600&auto=format&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1585338107529-13afc5f02586?w=600&auto=format&fit=crop&q=80",
   },
   {
     id: "car-accessories",
@@ -192,7 +192,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     reviewsCount: 640,
     inStock: true,
     stockQty: 52,
-    image: "https://images.unsplash.com/photo-1608248597359-bb5591eb3397?w=600&auto=format&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
     features: ["Real-time Wattage Display", "E-Marker Chip", "30,000+ Bend Tested"],
   },
   {
