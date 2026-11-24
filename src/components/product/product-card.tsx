@@ -29,13 +29,13 @@ export function ProductCard({ product, selectedModel }: ProductCardProps) {
   };
 
   return (
-    <div className="group rounded-2xl border border-slate-200/90 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-xs hover:shadow-lg transition-all flex flex-col justify-between">
+    <div className="group rounded-2xl border border-slate-200/90 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden shadow-xs hover:shadow-lg transition-all flex flex-col justify-between w-full">
       {/* Top Media Container */}
       <div className="relative w-full aspect-square bg-slate-100 dark:bg-slate-800 overflow-hidden">
         {/* Badges */}
-        <div className="absolute top-2.5 left-2.5 z-10 flex flex-col gap-1 items-start">
+        <div className="absolute top-2 left-2 z-10 flex flex-col gap-1 items-start">
           {product.tag && (
-            <span className={`text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md shadow-xs ${
+            <span className={`text-[10px] sm:text-[11px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md shadow-xs ${
               product.tag === "Deal of the Day"
                 ? "bg-red-600 text-white"
                 : product.tag === "Bestseller"
@@ -46,14 +46,14 @@ export function ProductCard({ product, selectedModel }: ProductCardProps) {
             </span>
           )}
           {!product.inStock && (
-            <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded-md bg-slate-800/90 text-slate-200">
+            <span className="text-[10px] sm:text-[11px] font-bold uppercase px-2 py-0.5 rounded-md bg-slate-800/90 text-slate-200">
               Out of Stock
             </span>
           )}
         </div>
 
         {/* Discount Badge */}
-        <span className="absolute top-2.5 right-2.5 z-10 text-[10px] font-black px-2 py-0.5 rounded-md bg-emerald-600 text-white shadow-xs">
+        <span className="absolute top-2 right-2 z-10 text-[10px] sm:text-[11px] font-black px-2 py-0.5 rounded-md bg-emerald-600 text-white shadow-xs">
           {product.discountPercent}% OFF
         </span>
 
@@ -65,10 +65,10 @@ export function ProductCard({ product, selectedModel }: ProductCardProps) {
       </div>
 
       {/* Info Container */}
-      <div className="p-4 flex-1 flex flex-col justify-between">
+      <div className="p-3 sm:p-4 flex-1 flex flex-col justify-between">
         <div>
           {/* Compatible Models Indicator */}
-          <div className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1 line-clamp-1">
+          <div className="text-[10px] sm:text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1 line-clamp-1">
             {product.brand} · Fits {product.compatibleModels[0]}
           </div>
 
@@ -77,7 +77,7 @@ export function ProductCard({ product, selectedModel }: ProductCardProps) {
           </h3>
 
           {/* Rating */}
-          <div className="flex items-center gap-1.5 mt-2">
+          <div className="flex items-center gap-1.5 mt-1.5 sm:mt-2">
             <div className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 text-[11px] font-bold">
               <span>{product.rating}</span>
               <Star className="w-3 h-3 fill-current" />
@@ -86,7 +86,7 @@ export function ProductCard({ product, selectedModel }: ProductCardProps) {
           </div>
 
           {/* Key bullets */}
-          <div className="mt-2.5 space-y-1">
+          <div className="mt-2 space-y-1">
             {product.features.slice(0, 2).map((feat, idx) => (
               <p key={idx} className="text-[11px] text-slate-600 dark:text-slate-400 flex items-center gap-1.5 leading-tight">
                 <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
@@ -96,10 +96,10 @@ export function ProductCard({ product, selectedModel }: ProductCardProps) {
           </div>
         </div>
 
-        {/* Pricing & Add to Cart button */}
-        <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between gap-2">
+        {/* Pricing & Add to Cart button (44px min tap height on mobile) */}
+        <div className="mt-3 sm:mt-4 pt-2.5 sm:pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between gap-2">
           <div>
-            <div className="flex items-baseline gap-1.5">
+            <div className="flex items-baseline gap-1 sm:gap-1.5">
               <span className="text-sm sm:text-base font-black text-slate-900 dark:text-slate-50">
                 {formatINR(product.price)}
               </span>
@@ -108,7 +108,7 @@ export function ProductCard({ product, selectedModel }: ProductCardProps) {
               </span>
             </div>
             {product.inStock && product.stockQty < 15 && (
-              <p className="text-[10px] font-bold text-amber-600 dark:text-amber-400">
+              <p className="text-[10px] sm:text-[11px] font-bold text-amber-600 dark:text-amber-400">
                 Only {product.stockQty} left!
               </p>
             )}
@@ -117,7 +117,7 @@ export function ProductCard({ product, selectedModel }: ProductCardProps) {
           <button
             onClick={handleAddToCart}
             disabled={!product.inStock}
-            className={`h-9 px-3.5 rounded-xl font-bold text-xs flex items-center gap-1.5 transition-all shadow-xs ${
+            className={`min-h-[40px] px-3.5 rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 transition-all shadow-xs ${
               !product.inStock
                 ? "bg-slate-100 dark:bg-slate-800 text-slate-400 cursor-not-allowed"
                 : added
@@ -128,12 +128,12 @@ export function ProductCard({ product, selectedModel }: ProductCardProps) {
             {added ? (
               <>
                 <Check className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">Added</span>
+                <span>Added</span>
               </>
             ) : (
               <>
                 <ShoppingBag className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">Add</span>
+                <span>Add</span>
               </>
             )}
           </button>
